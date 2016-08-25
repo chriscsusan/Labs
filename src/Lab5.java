@@ -11,11 +11,9 @@ public class Lab5 {
 		int timesRolled = 1;
 		
 		while (proceed.equalsIgnoreCase("y")){
-		
 			rolls(sides, timesRolled, scanner);
 			proceed = rollAgain(scanner);
-			timesRolled++;
-			
+			timesRolled++;		
 		}
 		scanner.close();
 	}
@@ -23,7 +21,6 @@ public class Lab5 {
 	
 	
 	public static int rolls(int sides, int rollNumber, Scanner scanner){
-		
 		int amountOfRolls = rollNumber;
 		double roll1 = Math.random() * sides;
 		int result1 = (int)roll1 + 1;
@@ -37,9 +34,7 @@ public class Lab5 {
 		return amountOfRolls;
 	}
 	
-	
 	public static int howManySides(Scanner scanner){
-		
 		System.out.println("How many sides should each die have?");
 		int diceSides = scanner.nextInt();
 			
@@ -47,7 +42,6 @@ public class Lab5 {
 	}
 	
 	public static String rollAgain(Scanner scanner){
-		
 		String again = "y";
 		System.out.println("Do you want to roll again? (y/n)");
 		again = scanner.next();
