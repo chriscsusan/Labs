@@ -29,8 +29,8 @@ public class Lab5b {
 		int amountOfRolls = rollNumber;
 		int roll1 = random.nextInt(sides);
 		int roll2 = random.nextInt(sides);
-		int result1 = (int)roll1;
-		int result2 = (int)roll2;
+		int result1 = roll1 + 1;
+		int result2 = roll2 + 1;
 		System.out.println("Roll " + amountOfRolls);
 		System.out.println("Die 1: " + result1);
 		System.out.println("Die 2: " + result2 + "\r");
