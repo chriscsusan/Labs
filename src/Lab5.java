@@ -22,10 +22,21 @@ public class Lab5 {
 	
 	public static int rolls(int sides, int rollNumber, Scanner scanner){
 		int amountOfRolls = rollNumber;
+		int result1;
+		int result2;
 		double roll1 = Math.random() * sides;
-		int result1 = (int)roll1 + 1;
 		double roll2 = Math.random() * sides;
-		int result2 = (int)roll2 + 1;
+		if (roll1 == sides){
+			result1 = (int)roll1;
+		}else {
+		result1 = (int)roll1 + 1;
+		}
+		if (roll2 == sides){
+			result2 = (int)roll2;
+		} else{
+		result2 = (int)roll2 + 1;
+		}
+				
 		System.out.println("Roll " + amountOfRolls);
 		System.out.println("Die 1: " + result1);
 		System.out.println("Die 2: " + result2 + "\r");
