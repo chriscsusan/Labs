@@ -49,7 +49,6 @@ public class Lab6_Extended {
 	 */
 	public static String translateWord(String englishWord) {
 		String latinWord = "";
-		System.out.println(englishWord);
 		boolean firstUpper = checkCase(englishWord);
 		boolean allUpper = checkWordCase(englishWord);
 		englishWord = englishWord.toLowerCase();
@@ -60,7 +59,7 @@ public class Lab6_Extended {
 		}
 		latinWord = caseChecker(firstUpper, allUpper, latinWord);
 		
-		System.out.println(latinWord);
+		
 
 		return latinWord;
 	}
