@@ -40,7 +40,7 @@ public class Lab7 {
 			}
 			scanner.nextLine();
 			while (true) {
-				System.out.println("What would you like to learn about another person? (Hometown or favorite food)");
+				System.out.println("What would you like to learn about this person? (Hometown or favorite food)");
 				answer = scanner.nextLine();
 				if (answer.equalsIgnoreCase("hometown")) {
 					System.out.println(name[studentIndex] + " is from " + hometown[studentIndex]);
