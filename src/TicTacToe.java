@@ -67,47 +67,45 @@ public class TicTacToe {
 	}
 
 	public static int[] nextMove(Scanner sc, char board[][], int move[]) {
-		int temp = 0;
-		
 		System.out.println("\rPlayer " + (move[2]));
 		while (true) {
 			while (true) {
 				System.out.println("Where would you like to go next? (horizontal)");
-					
-					try{
-						move[0] = sc.nextInt();
-						
-					}catch (InputMismatchException ex){
-						System.out.println("You must enter an integer value from 0-2.");
-						sc.nextLine();
-						continue;
-					}
-					
+
+				try {
+					move[0] = sc.nextInt();
+
+				} catch (InputMismatchException ex) {
+					System.out.println("You must enter an integer value from 0-2.");
+					sc.nextLine();
+					continue;
+				}
+
 				if (move[0] <= 2 && move[0] >= 0) {
 					break;
-				}else{
+				} else {
 					System.out.println("Position out of range");
 					System.out.println("Please enter a number from 0-2.");
 					continue;
 				}
-		
+
 			}
 
 			while (true) {
 				System.out.println("Where would you like to go next? (vertical)");
-				try{
-				move[1] = sc.nextInt();
-				}catch (InputMismatchException ex){
+				try {
+					move[1] = sc.nextInt();
+				} catch (InputMismatchException ex) {
 					System.out.println("You must enter an integer value from 0-2.");
 					sc.nextLine();
 					continue;
 				}
 				if (move[1] <= 2 && move[1] >= 0) {
 					break;
-				}else{
+				} else {
 					System.out.println("Position out of range");
 					System.out.println("Please enter a number from 0-2.");
-				continue;
+					continue;
 				}
 			}
 			if (board[move[0]][move[1]] != '_') {
