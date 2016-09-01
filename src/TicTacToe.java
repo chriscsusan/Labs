@@ -34,7 +34,7 @@ public class TicTacToe {
 			}
 			displayBoard(board);
 			while (true) {
-				System.out.println("Do you want to choose another person? (y/n)");
+				System.out.println("Do you want to play another game? (y/n)");
 				proceed = sc.next();
 				if (proceed.equalsIgnoreCase("y") || proceed.equalsIgnoreCase("n")) {
 					break;
@@ -74,7 +74,6 @@ public class TicTacToe {
 
 				try {
 					move[0] = sc.nextInt();
-
 				} catch (InputMismatchException ex) {
 					System.out.println("You must enter an integer value from 0-2.");
 					sc.nextLine();
