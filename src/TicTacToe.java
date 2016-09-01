@@ -71,7 +71,6 @@ public class TicTacToe {
 		while (true) {
 			while (true) {
 				System.out.println("Where would you like to go next? (horizontal)");
-
 				try {
 					move[0] = sc.nextInt();
 				} catch (InputMismatchException ex) {
@@ -207,7 +206,7 @@ public class TicTacToe {
 				break;
 			}
 			for (int i = 2; i > 0; i--) {
-				if (board[i][i] == 'x' && board[i + 1][i + 1] == 'x' && board[i + 2][i + 2] == 'x') {
+				if (board[0][0] == 'x' && board[1][1] == 'x' && board[2][2] == 'x') {
 					win = true;
 					break;
 				} else
@@ -217,7 +216,7 @@ public class TicTacToe {
 				break;
 			}
 			for (int i = 0; i < 3; i++) {
-				if (board[i][i] == 'o' && board[i + 1][i + 1] == 'o' && board[i + 2][i + 2] == 'o') {
+				if (board[0][0] == 'o' && board[1][1] == 'o' && board[2][2] == 'o') {
 					win = true;
 					break;
 				} else
