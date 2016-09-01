@@ -182,46 +182,36 @@ public class TicTacToe {
 	public static boolean victoryCheckX(char board[][]) {
 		boolean win = false;
 		while (true) {
-			for (int i = 0; i < 3; i++) {
-				if (board[0][0] == 'x' && board[1][1] == 'x' && board[2][2] == 'x') {
-					win = true;
-					break;
-				} else
-					win = false;
-			}
-			if (win == true) {
+			if (board[0][0] == 'x' && board[1][1] == 'x' && board[2][2] == 'x') {
+				win = true;
 				break;
-			}
-			for (int i = 0; i < 3; i++) {
-				if (board[0][2] == 'o' && board[1][1] == 'o' && board[2][0] == 'o') {
-					win = true;
-					break;
-				} else
-					win = false;
-			}
+			} else
+				win = false;
+			
+			if (board[0][2] == 'o' && board[1][1] == 'o' && board[2][0] == 'o') {
+				win = true;
+				break;
+			} else
+				win = false;
 			break;
 		}
 		while (true) {
 			if (win == true) {
 				break;
 			}
-			for (int i = 2; i > 0; i--) {
-				if (board[0][0] == 'x' && board[1][1] == 'x' && board[2][2] == 'x') {
-					win = true;
-					break;
-				} else
-					win = false;
-			}
-			if (win == true) {
+
+			if (board[0][0] == 'x' && board[1][1] == 'x' && board[2][2] == 'x') {
+				win = true;
 				break;
-			}
-			for (int i = 0; i < 3; i++) {
-				if (board[0][0] == 'o' && board[1][1] == 'o' && board[2][2] == 'o') {
-					win = true;
-					break;
-				} else
-					win = false;
-			}
+			} else
+				win = false;
+
+			if (board[0][0] == 'o' && board[1][1] == 'o' && board[2][2] == 'o') {
+				win = true;
+				break;
+			} else
+				win = false;
+
 			break;
 		}
 		return win;
