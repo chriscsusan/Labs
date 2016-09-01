@@ -9,12 +9,14 @@ public class TicTacToe {
 		char[][] board = new char[3][3];
 		move[2] = 1;
 		String proceed = "y";
-		for (int y = 0; y < 3; y++) {
-			for (int x = 0; x < 3; x++) {
-				board[x][y] = '_';
-			}
-		}
+		
 		while (proceed.equalsIgnoreCase("y")) {
+			move[2] = 1;
+			for (int y = 0; y < 3; y++) {
+				for (int x = 0; x < 3; x++) {
+					board[x][y] = '_';
+				}
+			}
 			for (int i = 0; i < 9; i++) {
 				displayBoard(board);
 				move = nextMove(sc, board, move);
@@ -33,9 +35,10 @@ public class TicTacToe {
 				}
 			}
 			displayBoard(board);
+			sc.nextLine();
 			while (true) {
 				System.out.println("Do you want to play another game? (y/n)");
-				proceed = sc.next();
+				proceed = sc.nextLine();
 				if (proceed.equalsIgnoreCase("y") || proceed.equalsIgnoreCase("n")) {
 					break;
 				} else {
@@ -143,7 +146,7 @@ public class TicTacToe {
 				break;
 			}
 			for (int i = 0; i < 3; i++) {
-				if (board[i][0] == 'o' && board[i][1] == 'o' && board[i][0] == 'o') {
+				if (board[i][0] == 'o' && board[i][1] == 'o' && board[i][2] == 'o') {
 					win = true;
 					break;
 				} else
@@ -188,7 +191,7 @@ public class TicTacToe {
 			} else
 				win = false;
 			
-			if (board[0][2] == 'o' && board[1][1] == 'o' && board[2][0] == 'o') {
+			if (board[0][0] == 'o' && board[1][1] == 'o' && board[2][2] == 'o') {
 				win = true;
 				break;
 			} else
@@ -200,13 +203,13 @@ public class TicTacToe {
 				break;
 			}
 
-			if (board[0][0] == 'x' && board[1][1] == 'x' && board[2][2] == 'x') {
+			if (board[0][2] == 'x' && board[1][1] == 'x' && board[2][0] == 'x') {
 				win = true;
 				break;
 			} else
 				win = false;
 
-			if (board[0][0] == 'o' && board[1][1] == 'o' && board[2][2] == 'o') {
+			if (board[0][2] == 'o' && board[1][1] == 'o' && board[2][0] == 'o') {
 				win = true;
 				break;
 			} else
