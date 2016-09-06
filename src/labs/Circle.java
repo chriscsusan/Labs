@@ -5,7 +5,7 @@ import java.text.NumberFormat;
 public class Circle {
 	private double radius;
 	public static int circles;
-	NumberFormat number;
+	public NumberFormat number;
 		
 	public Circle(double radius){
 		this.radius = radius;
@@ -17,8 +17,7 @@ public class Circle {
 	}
 	
 	public String getFormattedCircumference(){	
-		String number = formatNumber(getCircumference());
-		return number;
+		return formatNumber(getCircumference());
 	}
 	
 	public double getArea(){
@@ -26,8 +25,7 @@ public class Circle {
 	}
 	
 	public String getFormattedArea(){
-		String number = formatNumber(getArea());
-		return number;
+		return formatNumber(getArea());
 	}
 	
 	private String formatNumber(double x){
