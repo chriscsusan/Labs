@@ -9,35 +9,34 @@ public class RoshamboApp {
 	public static void main(String[] args) {
 		Player opponent;
 		String opponentChoice;
-		Player randomPlayer = new RandomPlayer();
-		Player humanPlayer = new HumanPlayer();
 		Roshambo humanResult;
 		Roshambo opponentResult;
 		String playAgain = "y";
 
 		System.out.println("Get ready to play Roshambo.");
 		System.out.println("What is your name?");
-		humanPlayer.setName(sc.next());
+		Player humanPlayer = new HumanPlayer(sc.next());
 		sc.nextLine();
 		while (playAgain.equalsIgnoreCase("y")) {
 			while (true) {
 				System.out.println("Do you want to play against a predictable opponent? (y/n)");
 				opponentChoice = sc.next();
 				if (opponentChoice.equalsIgnoreCase("y")) {
-					opponent = new AlwaysRock();
+					opponent = new AlwaysRock("Dwayne Johnson");
 					break;
 				} else if (opponentChoice.equalsIgnoreCase("n")) {
-					opponent = new RandomPlayer();
+					opponent = new RandomPlayer("Loose cannon");
 					break;
 				} else {
 					System.out.println("Please choose Y for yes or N for no.");
 					continue;
 				}
 			}
+			
 			humanResult = humanPlayer.generateRoshambo();
 			opponentResult = opponent.generateRoshambo();
 			System.out.println(humanPlayer.getName() + " threw: " + humanResult);
-			System.out.println("Opponent throws: " + opponentResult);
+			System.out.println(opponent.getName() + " threw: " + opponentResult);
 
 			switch (humanResult) {
 			case ROCK:
@@ -77,10 +76,10 @@ public class RoshamboApp {
 				}
 				break;
 			default:
-
 			}
-			System.out.println("\nWins: " + humanPlayer.wins + "\nLosses: " + humanPlayer.losses + "\nTies: " 
-			+ humanPlayer.ties + "\nTotal games: " + (humanPlayer.wins + humanPlayer.losses + humanPlayer.ties));
+			System.out.println(
+					"\nWins: " + humanPlayer.wins + "\nLosses: " + humanPlayer.losses + "\nTies: " + humanPlayer.ties
+							+ "\nTotal games: " + (humanPlayer.wins + humanPlayer.losses + humanPlayer.ties));
 			sc.nextLine();
 			System.out.println("\nWould you like to play again? (y/n)");
 			playAgain = sc.next();
