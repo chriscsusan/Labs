@@ -1,3 +1,4 @@
+package labs;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 

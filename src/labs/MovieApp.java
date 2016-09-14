@@ -45,12 +45,12 @@ public class MovieApp {
 					System.out.println("Please choose from the following categories: Animation, Drama, Horror, or Scifi.");
 					continue;
 				}
-
 			}
 
 			for (Movie temp : movieList) {
 				if (temp.getCategory().equalsIgnoreCase(category)) {
-					System.out.println(temp.getTitle());
+					//System.out.println(temp.getTitle());
+					System.out.println(temp.toString());
 				}
 			}
 			scanner.nextLine();

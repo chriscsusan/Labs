@@ -1,3 +1,4 @@
+package labs;
 import java.util.Scanner;
 
 public class Lab6_Extended {
@@ -35,12 +36,8 @@ public class Lab6_Extended {
 				break;
 			}else{
 				;
-			}
-			
+			}	
 		}
-		
-		
-		
 		return latinPhrase;
 	}
 	/**
@@ -59,8 +56,6 @@ public class Lab6_Extended {
 		}
 		latinWord = caseChecker(firstUpper, allUpper, latinWord);
 		
-		
-
 		return latinWord;
 	}
 
@@ -77,9 +72,7 @@ public class Lab6_Extended {
 			}else if(latinWord.charAt(i) >= 123 && latinWord.charAt(i) <=125){
 				thirdSet = i;
 			}
-		
 		}
-		
 		return latinWord;
 	}
 	public static String caseChecker(boolean firstUpper, boolean allUpper, String latinWord) {
@@ -131,7 +124,6 @@ public class Lab6_Extended {
 
 		for (int i = 1; i < input.length(); i++) {
 			if (input.charAt(i) >= 'A' && input.charAt(i) <= 'Z') {
-
 			} else {
 				output = false;
 			}

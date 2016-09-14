@@ -8,7 +8,6 @@ public class CircleApp {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		double radius = 0.0;
-		
 		String keepGoing = "y";
 
 		while (keepGoing.equalsIgnoreCase("y")) {
@@ -31,7 +30,6 @@ public class CircleApp {
 			Circle circle1 = new Circle(radius);
 			System.out.println("The circumference is: " + circle1.getFormattedCircumference() + ".");
 			System.out.println("The area is: " + circle1.getFormattedArea() + ".");
-
 			sc.nextLine();
 			while (true) {
 				System.out.println("Do you want to do that again? (y/n)");

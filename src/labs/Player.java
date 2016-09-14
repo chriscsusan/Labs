@@ -7,6 +7,13 @@ public class Player {
 	int losses = 0;
 	int ties = 0;
 	
+	public Player(){
+	}
+	
+	public Player(String name){
+		this.name = name;
+	}
+	
 	public void setName(String name){
 		this.name = name;
 	}
@@ -17,6 +24,6 @@ public class Player {
 	
 	public Roshambo generateRoshambo(){
 		
-		return Roshambo.ROCK;
+		return Roshambo.SCISSORS;
 	}
 }

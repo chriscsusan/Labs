@@ -17,4 +17,10 @@ public class Movie {
 	public String getCategory(){
 		return this.category;
 	}
+	
+	@Override
+	public String toString(){
+		return title + " is in the " + category + " genre.";
+	}
+	
 }

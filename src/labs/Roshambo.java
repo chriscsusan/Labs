@@ -8,11 +8,11 @@ public enum Roshambo {
 	public String toString(){
 		switch (this){
 		case ROCK:
-			return "Rock";
+			return "rock";
 		case PAPER:
-			return "Paper";
+			return "paper";
 		case SCISSORS:
-			return "Scissors";
+			return "scissors";
 		}
 		return "Other";
 		
