@@ -10,13 +10,14 @@ public class CountriesApp {
 	public static void main(String[] args) {
 		List<String> countries = new ArrayList<>();
 		CountriesTextFile.checkForFile();
-		countries = CountriesTextFile.getCountry();
+		
 		int choice = 0;
 		String keepGoing = "y";
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Welcome to the Countries Maintenance Application!");
 
 		while (keepGoing.equalsIgnoreCase("y")) {
+			countries = CountriesTextFile.getCountry();
 			try {
 				System.out.println("\n1-See the list of countries");
 				System.out.println("2-Add a country");
@@ -53,6 +54,7 @@ public class CountriesApp {
 			}
 
 		}
+		sc.close();
 	}
 
 }

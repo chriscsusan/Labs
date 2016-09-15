@@ -26,3 +26,4 @@ Libya
 Algeria
 Egypt
 Cote D'Ivoire
+Niger
