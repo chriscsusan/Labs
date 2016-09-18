@@ -1,14 +1,14 @@
-In Search Of Lost Time	Marcel Proust
-Ulysses	James Joyce
-Don Quixote	Miguel de Cervantes
-Moby Dick	Herman Melville
-Hamlet	William Shakespeare
-War and Peace	Leo Tolstoy
-The Odyssey	Homer
-The Great Gatsby	F. Scott Fitzgerald
-The Divine Comedy	Dante Alighieri
-Madame Bovary	Gustave Flaubert
-The Brothers Karamazov	Fyodor Dostoyevsky
-One Hundred Years Of Solitude	Gabriel Garcia Marquez
-The Adventures Of Huckleberry Finn	Mark Twain
-The Iliad	Homer
+In Search Of Lost Time	Marcel Proust	ON_SHELF
+Ulysses	James Joyce	ON_SHELF
+Don Quixote	Miguel de Cervantes	ON_SHELF
+Moby Dick	Herman Melville	ON_SHELF
+Hamlet	William Shakespeare	RETURNED
+War and Peace	Leo Tolstoy	ON_SHELF
+The Odyssey	Homer	ON_SHELF
+The Great Gatsby	F. Scott Fitzgerald	ON_ORDER
+The Divine Comedy	Dante Alighieri	ON_SHELF
+Madame Bovary	Gustave Flaubert	ON_ORDER
+The Brothers Karamazov	Fyodor Dostoyevsky	ON_SHELF
+One Hundred Years Of Solitude	Gabriel Garcia Marquez	ON_SHELF
+The Adventures Of Huckleberry Finn	Mark Twain	ON_SHELF
+The Iliad	Homer	RETURNED

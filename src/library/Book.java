@@ -10,9 +10,27 @@ public class Book {
 	private String title = "";
 	private Date dueDate;
 
-	public Book(String title, String author) {
+	public Book(String title, String author, String status) {
 		this.author = author;
 		this.title = title;
+		switch(status){
+		case "ON_SHELF":
+			this.setStatusToOnShelf();
+			break;
+		case "RETURNED":
+			this.setStatusToReturned();
+			break;
+		case "ON_ORDER":
+			this.setStatusToOnOrder();
+			break;
+		case "CHECKED_OUT":
+			this.setStatusToCheckedOut(dueDate);
+			break;
+		default:
+		
+		
+		}
+		
 	}
 
 	public void setStatusToCheckedOut(Date dueDate) {
@@ -46,5 +64,7 @@ public class Book {
 	public Status getStatus() {
 		return status;
 	}
+	
+	
 
 }

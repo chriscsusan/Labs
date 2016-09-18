@@ -1,9 +1,12 @@
 package library;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -27,7 +30,7 @@ public class BookList {
 			String[] parts;
 			while (line != null) {
 				parts = line.split("\t");
-				bookList.add(new Book(parts[0], parts[1]));
+				bookList.add(new Book(parts[0], parts[1], parts[2]));
 				line = reader.readLine();
 			}
 			reader.close();
@@ -35,6 +38,17 @@ public class BookList {
 			throw new RuntimeException("");
 		}
 		return bookList;
+	}
+	
+	public static void setBook(String countryName) {
+		try {
+			File file = filePath.toFile();
+			PrintWriter printWriter = new PrintWriter(new BufferedWriter(new FileWriter(file, true)));
+			printWriter.println(countryName);
+			printWriter.close();
+		} catch (IOException ex) {
+			throw new RuntimeException("Something went wrong in setBook.");
+		}
 	}
 
 }
