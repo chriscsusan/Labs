@@ -41,6 +41,15 @@ public class Lab5 {
 		System.out.println("Roll " + amountOfRolls);
 		System.out.println("Die 1: " + result1);
 		System.out.println("Die 2: " + result2 + "\r");
+		if (result1 == 1 && result2 ==1){
+			System.out.println("Snake eyes!");
+		}
+		if (result1 == 6 && result2 ==6){
+			System.out.println("Box cars!");
+		}
+		if (result1 + result2 == 7 || result1 + result2 ==11){
+			System.out.println("Craps!");
+		}
 		amountOfRolls++;
 		
 		return amountOfRolls;

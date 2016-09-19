@@ -22,7 +22,7 @@ public class LibraryApp {
 		Date nextDate = c.getTime();
 		String dueDate = format.format(nextDate);
 		String answer = "";
-
+		Book currentBook;
 		int choice = 0;
 		String keepGoing = "y";
 		Scanner sc = new Scanner(System.in);
@@ -59,7 +59,6 @@ public class LibraryApp {
 					for (Book b : bookList) {
 						if (b.getAuthor().toLowerCase().contains(author)) {
 							System.out.println("\"" + b.getTitle() + "\"\n\t by: " + b.getAuthor());
-							;
 
 						}
 					}
@@ -81,17 +80,25 @@ public class LibraryApp {
 					System.out.println("Enter title of book:");
 					sc.nextLine();
 					title = sc.nextLine().toLowerCase();
+					currentBook = getBook(title, bookList);
 					System.out.println(getBook(title, bookList).getStatus().toString());
 					Status status = getBook(title, bookList).getStatus();
 					switch (status) {
 					case ON_SHELF:
-						System.out.println("Would you like to check out this book?");
+						checkOutBook(currentBook, sc);
 						break;
 					case RETURNED:
 						System.out.println("Do you want someone to find this book so you can check it out?");
+						sc.nextLine();
+						answer = sc.next();
+						if (answer.equalsIgnoreCase("y")){
+							sc.nextLine();
+							currentBook.setStatusToOnShelf();
+							checkOutBook(currentBook, sc);
+						}
 						break;
 					case CHECKED_OUT:
-						System.out.println("This book is due back on " + "" + ".  Please come after that to check it out.");
+						System.out.println("This book is due back on " + format.format(currentBook.getDueDate()) + ".  Please come after that to check it out.");
 						break;
 					case ON_ORDER:
 						System.out.println("It is set to arrive on " + "" + ".\nPlease come back then to check it out.");
@@ -129,6 +136,15 @@ public class LibraryApp {
 		}
 		System.out.println("Title not found.");
 		return null;
+	}
+	
+	public static void checkOutBook(Book currentBook, Scanner sc){
+		String answer;
+		System.out.println("Would you like to check out this book?");
+		sc.nextLine();
+		answer = sc.next();
+		
+		
 	}
 
 }
