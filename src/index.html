@@ -4,6 +4,21 @@
 <head>
 <link href="main.css" rel='stylesheet' />
 <title>Gentlemen, behold!</title>
+<script language="javascript">
+function checkboxes()
+{
+ var inputElems = document.getElementsByTagName("input"),
+  count = 0;
+
+  for (var i=0; i<inputElems.length; i++) {       
+     if (inputElems[i].type == "checkbox" && inputElems[i].checked == true){
+        count++;
+     }
+  }
+  alert(count);
+}
+
+</script>
 </head>
 <body>
 
@@ -51,7 +66,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><b><h4 id="center">Phase 2</h4></b>
+				<td><h4 id="center">Phase 2</h4>
 					<ul>
 						<li><input type="checkbox" name="movie" value="IM3"><a href="https://en.wikipedia.org/wiki/Iron_Man_3">Iron
 							Man 3</a></li>
@@ -98,7 +113,7 @@
 		</table>
 		<input type="submit">
 	</form>
-<div>The <h4>Marvel Cinematic Universe</h4> is a very large and ambitious project started by Marvel after they created their own movie studio in the mid-2000s.</div>
+<div><h4>The Marvel Cinematic Universe</h4> is a very large and ambitious project started by Marvel after they created their own movie studio in the mid-2000s.  It currently consists of 13 released movies and 4 TV shows.</div>
 
 </body>
 </html>
