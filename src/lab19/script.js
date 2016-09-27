@@ -16,7 +16,7 @@ $(document).ready(function() {
 		var tempPrice = 0;
 		for (var i = 0; i < cart.length; i++) {
 			console.log(cart[i].name + " $" + cart[i].price);
-			total += parseFloat(cart[i].price);
+			total += Number(cart[i].price);
 		}
 		console.log("Total cost: " + parseFloat(Math.round(total * 100) / 100).toFixed(2));
 	});
