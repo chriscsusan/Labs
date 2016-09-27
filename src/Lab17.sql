@@ -31,4 +31,4 @@ SELECT * FROM orders right JOIN customers on orders.customer_id=customers.id;
 -- #15
 select employees.first_name from employees where employees.notes is not null;
 -- #16.
-select orders.ship_city from orders where orders.ship_name like "Francisco%";
+SELECT ship_city FROM orders o inner JOIN customers c on o.customer_id=c.id where c.first_name='Francisco';
