@@ -1,3 +1,4 @@
+// Worked with Chris D.
 $(document).ready(function() {
 
 	var cart = [];
