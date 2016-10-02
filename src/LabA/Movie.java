@@ -29,6 +29,16 @@ public class Movie {
 		category = c;
 	}
 	
+	public Movie (String t, String c, String d, Integer y, boolean bAw, String r, String o) {
+		title = t;
+		category = c;
+		description = d;
+		year = y;
+		blackAndWhite=bAw;
+		rating = r;
+		origin = o;
+	}
+	
 	public String getRating(){
 		return rating;
 	}
