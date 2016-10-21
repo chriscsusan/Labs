@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- COMMENT -->
+<htmL>
+<head>
+<link href="main.css" rel='stylesheet' />
+<title>Gentlemen, behold!</title>
+<script language="javascript">
+function checkboxes()
+{
+ var inputElems = document.getElementsByTagName("input"),
+  count = 0;
+
+  for (var i=0; i<inputElems.length; i++) {       
+     if (inputElems[i].type == "checkbox" && inputElems[i].checked == true){
+        count++;
+     }
+  }
+  alert("You've seen " + count + " of the above entries.");
+}
+
+</script>
+</head>
+<body>
+	<h2 class="center">
+	Marvel Cinematic Universe
+	</h2>
+	
+
+	<form>
+		<table class="center">
+			<tr>
+				<td><h3>Movies</h3></td>
+				<td><h3>Shows</h3></td>
+			</tr>
+			<tr>
+				<td><b><h4 id="center">Phase 1</h4></b>
+					<ul>
+						<li><input type="checkbox" name="movie" value="IM1"><a href="https://en.wikipedia.org/wiki/Iron_Man_(2008_film)">Iron Man</a></li>
+						<li><input type="checkbox" name="movie" value="IM2"><a href="https://en.wikipedia.org/wiki/Iron_Man_2">Iron Man 2</a></li>
+						<li><input type="checkbox" name="movie" value="Hulk 1"><a href="https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)">The Incredible Hulk</a></li>
+						<li><input type="checkbox" name="movie" value="Thor 1"><a href="https://en.wikipedia.org/wiki/Thor_(film)">Thor</a></li>
+						<li><input type="checkbox" name="movie" value="Cap 1"><a href="https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger">Captain America: The First Avenger</a></li>
+						<li><input type="checkbox" name="movie" value="Avengers1"><a href="https://en.wikipedia.org/wiki/The_Avengers_(2012_film)">Avengers</a></li>
+					</ul>
+				</td>
+				<td>
+					<ul>
+						<li><input type="checkbox" name="show" value="SHIELD"><a href="https://en.wikipedia.org/wiki/Agents_of_S.H.I.E.L.D.">Agents Of S.H.I.E.L.D</a></li>
+
+						<li><input type="checkbox" name="show" value="AC"><a href="https://en.wikipedia.org/wiki/Agent_Carter_(TV_series)">Agent Carter</a></li>
+
+						<li><input type="checkbox" name="show" value="DD"><a href="https://en.wikipedia.org/wiki/Daredevil_(TV_series)">Daredevil</a></li>
+
+						<li><input type="checkbox" name="show" value="JJ"><a href="https://en.wikipedia.org/wiki/Jessica_Jones_(TV_series)">Jessica Jones</a></li>
+
+						<li>Luke Cage</li>
+
+						<li>Iron Fist</li>
+
+						<li>Defenders</li>
+
+						<li>Punisher</li>
+
+						<li>Cloak and Dagger</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td><h4 id="center">Phase 2</h4>
+					<ul>
+						<li><input type="checkbox" name="movie" value="IM3"><a href="https://en.wikipedia.org/wiki/Iron_Man_3">Iron
+							Man 3</a></li>
+
+						<li><input type="checkbox" name="movie" value="Thor 2"><a href="https://en.wikipedia.org/wiki/Thor:_The_Dark_World">Thor:
+							The Dark World</a></li>
+
+						<li><input type="checkbox" name="movie" value="Cap 2"><a href="https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier">Captain
+							America: Winter Soldier</a></li>
+
+						<li><input type="checkbox" name="movie" value="Guardians"><a href="https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)">Guardians
+							of the Galaxy</a></li>
+
+						<li><input type="checkbox" name="movie" value="Avengers 2"><a href="https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron">Avengers:
+							Age of Ultron</a></li>
+
+						<li><input type="checkbox" name="movie" value="Ant-man"><a href="https://en.wikipedia.org/wiki/Ant-Man_(film)">Ant-man</a></li>
+
+					</ul></td>
+				<td></td>
+			<tr>
+			   <td>
+				  <h4 id="center">Phase 3</h4>
+					<ul>
+						<li><input type="checkbox" name="movie" value="Cap 3"><a href="https://en.wikipedia.org/wiki/Captain_America:_Civil_War">Captain America: Civil War</a></li>
+						<li>Doctor Strange</li>
+
+						<li>Guardians of the Galaxy Vol. 2</li>
+
+						<li>Spiderman: Homecoming</li>
+
+						<li>Thor: Ragnarok</li>
+
+						<li>Black Panther</li>
+
+						<li>Avengers: Infinity War</li>
+
+						<li>Ant-man and the Wasp</li>
+						<li>Captain Marvel</li>
+						<li>Avengers: TBD</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+		<button onclick="checkboxes()">Click me</button>
+	</form>
+<div><h4>The Marvel Cinematic Universe</h4> is a very large and ambitious project started by Marvel after they created their own movie studio in the mid-2000s.  It currently consists of 13 released movies and 4 TV shows.  Which of the ones which have been released have you watched?</div>
+
+</body>
+</html>

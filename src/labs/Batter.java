@@ -48,7 +48,6 @@ public class Batter {
 		System.out.println("0=out, 1=single, 2=double, 3=triple, 4=home run");
 		while (answer.equalsIgnoreCase("y") || answer.equalsIgnoreCase("yes")) {
 			setBases(Validator.getInt(sc, "Result for at-bat:", 0, 4));
-			
 			answer = another(sc);
 		}
 	}

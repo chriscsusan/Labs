@@ -15,12 +15,8 @@ public class CountriesTextFile {
 	public static void setCountry(String countryName) {
 		try {
 			File file = filePath.toFile();
-			FileWriter fileWriter = new FileWriter(file, true);
-			PrintWriter printWriter = new PrintWriter(new BufferedWriter(fileWriter));
-
+			PrintWriter printWriter = new PrintWriter(new BufferedWriter(new FileWriter(file, true)));
 			printWriter.println(countryName);
-			printWriter.flush();
-			fileWriter.close();
 			printWriter.close();
 		} catch (IOException ex) {
 			throw new RuntimeException("Something went wrong in setCountry.");
@@ -31,20 +27,16 @@ public class CountriesTextFile {
 
 		try {
 			File file = filePath.toFile();
-			FileReader fileReader = new FileReader(file);
-			BufferedReader reader = new BufferedReader(fileReader);
+			BufferedReader reader = new BufferedReader(new FileReader(file));
 			String line = reader.readLine();
 			while (line != null) {
 				countries.add(line);
 				line = reader.readLine();
 			}
 			reader.close();
-			fileReader.close();
 		} catch (IOException ex) {
 			throw new RuntimeException("");
 		}
-		
-		
 		return countries;
 	}
 

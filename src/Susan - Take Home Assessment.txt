@@ -1,0 +1,124 @@
+1. Code examples
+
+A. The variable name in line 9 needs to be declared with type String.
+
+B. The Scanner that is declared on line 11 should be declared before line 7.
+
+C. The variable number is declared as a String on line 9, but takes an int from the Scanner which is a type mismatch.  number should be an int, and then the statement on line 11 would work as well.
+
+D. On line 9 the method called for the scanner should be nextInt().  Right now it's expecting a String, which cannot be stored in an int variable.
+
+E. The variable product on line 11 was not declared and needs to have the type int.
+
+F. The statement on line 11 should be "int product = 10 * number;" because the case in the variable name needs to be consistent.
+
+G. There is nowhere for the user to actually input a response.  The scanner in should be called and fed into the statement on line 11.
+
+H. Line 14 should actually calculate the product: int product = 10 * number;
+
+I. Line 11 should use == instead of =, and maybe have {}s around "System.out.println("Correct!");"
+
+J. Line 11 should have ()s for the if condition, rather than {}s.
+
+K. The if statement shouldn't have a semicolon in line 13.
+
+L. Gimme
+
+M. There are no breaks in the cases, therefore each statement after the chosen case runs as well.
+
+N. Line 7 has mismatched types.  The type is declared as Movie, but a new ArrayList is trying to be created.  It should be List movies = new ArrayList<Movie>(); or ArrayList movies = new ArrayList<Movie>();
+
+O. The ArrayList was declared with the type of String, but in lines 8 and 9, new Movie instances are being added.  Only Strings can be added unless the type is changed from String to Movie in line 7.
+
+P. Lines 8 and 9 need to call the Movie constructor, but instead they are just entering Strings into the add() method.  Should look like: movies.add(new Movie("The LEGO Movie", "awesome"));
+
+Q. Line 15 is printing the toString() method for the Movie class.  It should be: System.out.println(movie.getTitle());
+
+R. The for statement should start like this: for (Movie movie : movies).  As it was written, it was declaring an ArrayList and that wasn't correct.
+
+S. The for loop has a declaration of a variable that is a duplicate because it uses the name of an existing variable.  Should be "for (Movie movie : movies) {" and then in line 13 it should be movie, not movies. 
+
+T. Line 7 needs parentheses: ArrayList<Movie> movies = new ArrayList<Movie>();
+
+U. Line 12 is an incomplete for statement.  Should be "for (Movie movie: movies) {" and then line 13 should be movie, not movies.
+
+V. Line 13 is calling a method without specifying an instance of a class from which to call that method.  Should be: System.out.println(movie.getTitle());
+
+W. Line 14 isn't actually displaying the title.  Should be: System.out.println(movie.getTitle());
+
+--------------------------------------------------------------
+
+2. Abstract class
+
+public abstract class Animal {
+	public abstract String greet(String name);
+}
+public class Dog extends Animal{
+	@Override
+	public String greet(String name){
+		return "woof!";
+	}
+}
+public class Parrot extends Animal{
+	@Override
+	public String greet(String name){
+		return "Hello " + name;
+	}
+}
+import java.util.Scanner;
+
+public class PetShop {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Dog dog = new Dog();
+		Parrot parrot = new Parrot();
+		
+		System.out.println("What is your name?");
+		String name = sc.nextLine();
+		System.out.println("The dog says: " + dog.greet(name));
+		System.out.println("The parrot says: " + parrot.greet(name));
+		sc.close();
+	}
+}
+
+
+------------------------------------------------------------
+
+3. Constructors, getters, and setters. 
+
+public class MenuItem {
+	private String name;
+	private double price;
+	public MenuItem(){
+		
+	}
+	public MenuItem(String name, double price){
+		this.name=name;
+		this.price=price;
+	}
+	public String getName(){
+		return name;
+	}
+	public double getPrice(){
+		return price;
+	}
+}
+
+
+------------------------------------------------
+
+
+4. SQL queries.
+ 
+
+a. select firstname, lastname from students where studentid like 'ed%';
+
+b. SELECT firstname FROM students s inner JOIN studentcourses c on s.studentid=c.studentid where c.courseid='CSC1000';
+
+c. SELECT coursename FROM courses where prerequisite='CSC4500';
+
+d. insert students (studentid, firstname, lastname, major, startsemester) values ('ed9382', 'Buffy', 'Summers', 'Liberal Arts', 'Fall 1999');
+
+e. delete from studentcourses where semester = 'Fall 2010';
+
+f. update courses set coursename  = 'WSU ' + ColumnName;
